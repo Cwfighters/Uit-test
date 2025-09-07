@@ -1,0 +1,19 @@
+body, html { margin:0; padding:0; height:100%; font-family:sans-serif; }
+.match-container { display:grid; grid-template-columns:50% 50%; height:100vh; }
+
+.left-column { position:relative; }
+
+.fighters { display:flex; flex-direction:column; height:100%; }
+.fighter { flex:1; background-size:cover; background-position:center; border:1px solid #000; }
+
+.right-column { padding:10px; overflow-y:auto; background:#f0f0f0; font-size:18px; line-height:1.4; }
+
+.chat-panel {
+  position:absolute; top:0; left:0; width:100%; height:100%;
+  background:#111; color:white;
+  transform:translateX(-100%); transition:0.3s;
+  display:flex; flex-direction:column;
+}
+.chat-panel.open { transform:translateX(0); }
+.chat-header { display:flex; justify-content:space-between; padding:5px; background:#222; }
+.chat
