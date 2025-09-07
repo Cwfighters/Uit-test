@@ -10,9 +10,21 @@
   <div class="match-container">
     <!-- Left side -->
     <div class="left-column">
+      <button id="openChatBtn">Open Chat</button>
       <div class="fighters">
-        <div class="fighter" id="fighterA"></div>
-        <div class="fighter" id="fighterB"></div>
+
+        <!-- Upper fighter -->
+        <div class="fighter-container upper">
+          <div class="fighter" id="fighterA"></div>
+          <div class="fighter-stats" id="statsA">Wins: 0 | Losses: 0 | Draws: 0</div>
+        </div>
+
+        <!-- Lower fighter -->
+        <div class="fighter-container lower">
+          <div class="fighter-stats" id="statsB">Wins: 0 | Losses: 0 | Draws: 0</div>
+          <div class="fighter" id="fighterB"></div>
+        </div>
+
       </div>
 
       <!-- Spectator chat -->
@@ -27,14 +39,20 @@
           <button id="sendBtn">Send</button>
         </div>
       </div>
-
-      <button id="openChatBtn">Open Chat</button>
     </div>
 
     <!-- Right side (commentary) -->
     <div class="right-column" id="commentary"></div>
   </div>
 
+  <!-- Gallery Popup -->
+  <div class="gallery-overlay" id="galleryOverlay">
+    <span class="close-gallery" id="closeGallery">×</span>
+    <img id="galleryImage" src="">
+    <button class="nav-gallery" id="prevPic">◀</button>
+    <button class="nav-gallery" id="nextPic">▶</button>
+  </div>
+
   <script src="app.js"></script>
 </body>
-  </html>
+</html>
