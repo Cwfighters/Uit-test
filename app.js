@@ -22,7 +22,9 @@ const fakeMoves = [
   { by:"uid1", text:"Player A counters with a wrist lock!" },
   { by:"uid2", text:"Player B reverses and takes top position!" },
   { by:"uid1", text:"Player A attempts a submission hold!" },
-  { by:"uid2", text:"Player B reaches the ropes just in time!" }
+  { by:"uid2", text:"Player B reaches the ropes just in time!" },
+  { by:"uid1", text:"Player A goes for a flying knee strike!" },
+  { by:"uid2", text:"Player B blocks and throws a counter punch!" }
 ];
 
 let moveIndex = 0;
@@ -32,8 +34,7 @@ setInterval(()=>{
     match.commentary.push(move);
     const p = document.createElement('p');
     p.textContent = move.text;
-    p.style.color = move.by === "uid1" ? match.players.uid1.color : match.players.uid2.color;
-    p.style.textAlign = move.by === "uid1" ? "left" : "right";
+    p.className = move.by === "uid1" ? "left" : "right";
     commentaryDiv.appendChild(p);
     commentaryDiv.scrollTop = commentaryDiv.scrollHeight; // auto scroll
   }
