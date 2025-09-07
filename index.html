@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Match Test</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="match-container">
+    <!-- Left side -->
+    <div class="left-column">
+      <div class="fighters">
+        <div class="fighter" id="fighterA"></div>
+        <div class="fighter" id="fighterB"></div>
+      </div>
+
+      <!-- Spectator chat -->
+      <div class="chat-panel" id="spectatorChat">
+        <div class="chat-header">
+          <span>Spectator Chat</span>
+          <button id="closeChat">X</button>
+        </div>
+        <div class="chat-messages" id="chatMessages"></div>
+        <div class="chat-input">
+          <input type="text" id="chatInput" placeholder="Type a message">
+          <button id="sendBtn">Send</button>
+        </div>
+      </div>
+
+      <button id="openChatBtn">Open Chat</button>
+    </div>
+
+    <!-- Right side (commentary) -->
+    <div class="right-column" id="commentary"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+  </html>
